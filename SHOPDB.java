@@ -119,12 +119,6 @@ public class SHOPDB {
 		}
 	}
 	
-	public static void test2 (String name, Statement s) throws SQLException {
-		ResultSet result = s.executeQuery("SELECT Price FROM Items WHERE Item_name='" + name + "'");
-		if (result.next())
-			System.out.println(result.getInt("Price"));
-	}
-	
 	public static void displayProfitDB(Statement s) {
 		System.out.printf("%-30.30s  %-10.30s  %-10.30s%n", "ITEM_NAME", "PRICE", "PROFIT");
 		try {
